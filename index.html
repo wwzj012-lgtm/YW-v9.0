@@ -1,5 +1,4 @@
-﻿
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh-CN" class="dark">
   <head>
     <meta charset="UTF-8" />
@@ -58,12 +57,24 @@
 
       .glass-card {
         background: rgba(255, 255, 255, 0.03);
-        backdrop-filter: blur(20px);
-        -webkit-backdrop-filter: blur(20px);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
         border: 1px solid rgba(255, 255, 255, 0.08);
       }
 
       .tap-active:active { transform: scale(0.95); opacity: 0.8; }
+
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          animation-duration: 0.001ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.001ms !important;
+          scroll-behavior: auto !important;
+        }
+        .heart-particle {
+          display: none !important;
+        }
+      }
     </style>
     <script type="importmap">
     {
@@ -85,7 +96,13 @@
     <script>
       // 鐢熸垚鐖卞績绮掑瓙
       const container = document.getElementById('hearts-container');
+      const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const maxHearts = 18;
       const createHeart = () => {
+        if (!container || prefersReduced || document.hidden) return;
+        if (container.children.length >= maxHearts) {
+          container.removeChild(container.firstElementChild);
+        }
         const heart = document.createElement('div');
         heart.innerHTML = '&#10084;';
         heart.className = 'heart-particle';
@@ -96,14 +113,9 @@
         container.appendChild(heart);
         setTimeout(() => heart.remove(), 20000);
       };
-      setInterval(createHeart, 1500);
+      if (!prefersReduced) {
+        setInterval(createHeart, 3500);
+      }
     </script>
   </body>
 </html>
-
-
-
-
-
-
-
