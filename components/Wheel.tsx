@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef, useState, useCallback } from 'react';
 import { Option } from '../types';
 
@@ -56,7 +55,7 @@ const Wheel: React.FC<WheelProps> = ({ options, onFinished, isSpinning, size = 3
       ctx.restore();
     });
 
-    // 中心核心光晕
+    // 中心核心光芒
     const gradient = ctx.createRadialGradient(centerX, centerY, 0, centerX, centerY, 30);
     gradient.addColorStop(0, '#ff004c');
     gradient.addColorStop(1, 'transparent');

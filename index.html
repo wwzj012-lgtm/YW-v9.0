@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-    <meta name="apple-mobile-web-app-title" content="娆叉湜涓灑" />
-    <title>娆叉湜涓灑 | 娌夋蹈寮?PWA</title>
+    <meta name="apple-mobile-web-app-title" content="欲望中枢" />
+    <title>欲望中枢 | 沉浸式PWA</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -26,7 +26,7 @@
         user-select: none;
       }
 
-      /* 姘涘洿鑳屾櫙 */
+      /* 氛围背景 */
       .ambient-bg {
         position: fixed;
         inset: 0;
@@ -37,7 +37,7 @@
           radial-gradient(circle at 50% 50%, rgba(120, 0, 255, 0.05) 0%, transparent 60%);
       }
 
-      /* 娴姩鐖卞績鍔ㄧ敾 */
+      /* 浮动爱心动画 */
       @keyframes float-heart {
         0% { transform: translateY(100vh) scale(0) rotate(0deg); opacity: 0; }
         20% { opacity: 0.6; }
@@ -94,7 +94,7 @@
     <div id="root"></div>
     <script type="module" src="./index.tsx"></script>
     <script>
-      // 鐢熸垚鐖卞績绮掑瓙
+      // 生成爱心粒子
       const container = document.getElementById('hearts-container');
       const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       const maxHearts = 18;

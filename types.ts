@@ -2,11 +2,11 @@
 export type Gender = 'male' | 'female';
 
 export interface ChallengeResult {
-  position: string;   // 体位
-  target: string;     // 重点
-  prop: string;       // 手段
-  intensity: string;  // 强度
-  rule: string;       // 铁律
+  position: string;   // 浣撲綅
+  target: string;     // 閲嶇偣
+  prop: string;       // 鎵嬫
+  intensity: string;  // 寮哄害
+  rule: string;       // 閾佸緥
 }
 
 export interface Option {

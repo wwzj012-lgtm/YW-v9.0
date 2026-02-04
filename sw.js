@@ -1,4 +1,4 @@
-
+﻿
 const CACHE_NAME = 'vault-v8-cache';
 const ASSETS = [
   './',

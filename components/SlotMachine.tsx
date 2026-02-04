@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useRef } from 'react';
 import { Option } from '../types.ts';
 
@@ -41,13 +40,13 @@ const SlotMachine: React.FC<SlotMachineProps> = ({ options, isSpinning, onFinish
       
       const duration = 3000 + Math.random() * 1000;
       
-      // 使用带回弹的贝塞尔曲线: 在结束时会有轻微的过冲再回弹
+      // 使用带回弹的贝塞尔曲线，在结束时会有轻微的过冲再回弹
       setTransitionStyle(`transform ${duration}ms cubic-bezier(0.45, 0.05, 0.55, 1.15)`);
       setOffset(targetOffset);
 
       timerRef.current = window.setTimeout(() => {
         setIsLanding(true);
-        // 结束动画后重置位置到基础索引，保持视觉连贯
+        // 结束动画后重置位回到基础索引，保持视觉连贯
         setTransitionStyle('none');
         const finalBaseOffset = randomIndex * itemHeight;
         setOffset(finalBaseOffset);

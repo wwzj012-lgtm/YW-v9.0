@@ -1,4 +1,4 @@
-
+﻿
 import React from 'react';
 import { Heart, Crown } from 'lucide-react';
 import { Gender } from '../types.ts';
