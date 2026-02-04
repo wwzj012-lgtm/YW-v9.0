@@ -1,0 +1,16 @@
+
+{
+  "appId": "com.vault.midnight.v7",
+  "appName": "欲望中枢",
+  "webDir": "dist",
+  "bundledWebRuntime": false,
+  "server": {
+    "allowNavigation": ["*"]
+  },
+  "ios": {
+    "contentInset": "always"
+  },
+  "android": {
+    "allowMixedContent": true
+  }
+}

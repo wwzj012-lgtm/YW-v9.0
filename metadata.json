@@ -1,0 +1,7 @@
+{
+  "name": "Copy of 欲望中枢 V9.0",
+  "description": "情侣专属氛围感挑战转盘。支持 AI 指令生成与全屏沉浸体验。",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}

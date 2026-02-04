@@ -1,0 +1,25 @@
+{
+  "name": "欲望中枢 V9.0",
+  "short_name": "欲望中枢",
+  "description": "亲密互动 AI 指令中枢",
+  "start_url": "/YW-v9.0/",
+  "scope": "/YW-v9.0/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "pwa-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "pwa-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
