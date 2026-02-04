@@ -1,4 +1,4 @@
-
+﻿
 <!DOCTYPE html>
 <html lang="zh-CN" class="dark">
   <head>
@@ -6,10 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-    <meta name="apple-mobile-web-app-title" content="欲望中枢" />
-    <title>欲望中枢 | 沉浸式 PWA</title>
+    <meta name="apple-mobile-web-app-title" content="娆叉湜涓灑" />
+    <title>娆叉湜涓灑 | 娌夋蹈寮?PWA</title>
     
-    <link rel="manifest" href="./manifest.json" />
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@400;900&family=Noto+Serif+SC:wght@700;900&display=swap');
@@ -28,7 +27,7 @@
         user-select: none;
       }
 
-      /* 氛围背景 */
+      /* 姘涘洿鑳屾櫙 */
       .ambient-bg {
         position: fixed;
         inset: 0;
@@ -39,7 +38,7 @@
           radial-gradient(circle at 50% 50%, rgba(120, 0, 255, 0.05) 0%, transparent 60%);
       }
 
-      /* 浮动爱心动画 */
+      /* 娴姩鐖卞績鍔ㄧ敾 */
       @keyframes float-heart {
         0% { transform: translateY(100vh) scale(0) rotate(0deg); opacity: 0; }
         20% { opacity: 0.6; }
@@ -77,19 +76,18 @@
       }
     }
     </script>
-  <link rel="stylesheet" href="/index.css">
-</head>
+  </head>
   <body>
     <div class="ambient-bg"></div>
     <div id="hearts-container"></div>
     <div id="root"></div>
     <script type="module" src="./index.tsx"></script>
     <script>
-      // 生成爱心粒子
+      // 鐢熸垚鐖卞績绮掑瓙
       const container = document.getElementById('hearts-container');
       const createHeart = () => {
         const heart = document.createElement('div');
-        heart.innerHTML = '❤';
+        heart.innerHTML = '&#10084;';
         heart.className = 'heart-particle';
         heart.style.left = Math.random() * 100 + 'vw';
         heart.style.fontSize = (Math.random() * 10 + 10) + 'px';
@@ -100,6 +98,12 @@
       };
       setInterval(createHeart, 1500);
     </script>
-  <script type="module" src="/index.tsx"></script>
-</body>
+  </body>
 </html>
+
+
+
+
+
+
+
